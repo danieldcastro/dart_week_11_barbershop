@@ -8,7 +8,7 @@
 - [x] Construir SplashPage
   - [x] Animação
   - [x] Redirect
-- [ ] Construir página de login 
+- [x] Construir página de login 
 - [ ] Implementando RestClient 
 - [ ] Criar Application Providers 
 - [ ] Criar Funcional Return (Either) 

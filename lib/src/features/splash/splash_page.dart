@@ -61,7 +61,7 @@ class _SplashPageState extends State<SplashPage> {
           opacity: _animationOpacityLogo,
           child: Center(
             child: AnimatedContainer(
-                duration: const Duration(seconds: 3),
+                duration: const Duration(seconds: 1),
                 curve: Curves.linearToEaseOut,
                 width: _logoAnimationWidth,
                 height: _logoAnimationHeight,
