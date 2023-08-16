@@ -14,6 +14,7 @@
   - [x] Adicionar Dio 
 - [x] Criar Funcional Return (Either) 
 - [x] UserRepository.login 
-- [ ] User Login Service 
+- [x] User Login Service 
+  - [x] SharedPreferences 
 
 ---
