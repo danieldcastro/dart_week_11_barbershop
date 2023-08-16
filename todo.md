@@ -12,7 +12,7 @@
 - [x] Implementando RestClient 
 - [x] Criar Application Providers
   - [x] Adicionar Dio 
-- [ ] Criar Funcional Return (Either) 
+- [x] Criar Funcional Return (Either) 
 - [ ] UserRepository.login 
 - [ ] User Login Service 
 
