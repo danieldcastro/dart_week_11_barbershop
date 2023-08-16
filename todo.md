@@ -18,3 +18,30 @@
   - [x] SharedPreferences 
 
 ---
+##dia 2
+
+- [ ] Refactory
+  - [ ] Constants de imagens
+  - [ ] User login service provider
+- [ ] Implementar Login
+  - [ ] Form e validações
+  - [ ] VM e State
+  - [ ] Integrar com Service
+  - [ ] Criar "me provider" provider
+    - [ ] Modelo
+    - [ ] Repository
+    - [ ] Provider
+  - [ ]Criar "my barbershop" provider
+    - [ ] Modelo
+    - [ ] Barbershop Repository
+    - [ ] Provider
+  - [ ] Invalidar cache de me e barbershop
+- [ ] Criar tela "Criar conta" usuário       
+- [ ] Implementar tela "criar conta" usuário
+  - [ ] Auth Interceptor
+    - [ ] Add token "onRequest"
+    - [ ] Criar global nav key
+    - [ ] Expire token "OnError" 
+  - [ ] UserRepository.registerAdm
+  - [ ] UserRegisterService
+  - [ ] VM e State  
