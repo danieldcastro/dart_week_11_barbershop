@@ -5,7 +5,9 @@
 - [x] Criar Backend e configurar 
 - [x] Criar projeto e adicionar dependências do Riverpod 
 - [x] Adicionar Package AsyncState
-- [ ] Construir SplashPage 
+- [x] Construir SplashPage
+  - [x] Animação
+  - [x] Redirect
 - [ ] Construir página de login 
 - [ ] Implementando RestClient 
 - [ ] Criar Application Providers 
