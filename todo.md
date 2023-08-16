@@ -9,8 +9,9 @@
   - [x] Animação
   - [x] Redirect
 - [x] Construir página de login 
-- [ ] Implementando RestClient 
-- [ ] Criar Application Providers 
+- [x] Implementando RestClient 
+- [x] Criar Application Providers
+  - [x] Adicionar Dio 
 - [ ] Criar Funcional Return (Either) 
 - [ ] UserRepository.login 
 - [ ] User Login Service 
