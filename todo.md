@@ -13,7 +13,7 @@
 - [x] Criar Application Providers
   - [x] Adicionar Dio 
 - [x] Criar Funcional Return (Either) 
-- [ ] UserRepository.login 
+- [x] UserRepository.login 
 - [ ] User Login Service 
 
 ---
