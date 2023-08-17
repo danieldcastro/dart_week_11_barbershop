@@ -11,6 +11,13 @@ sealed class UserModel {
     required this.email,
     required this.avatar,
   });
+
+  factory UserModel.fromMap(Map<String, dynamic> json) =>
+      switch (json['profile']) {
+        'ADM' => UserModelADM.fromMap(json),
+        'EMPLOYEE' => UserModelEmployee.fromMap(json),
+        _ => throw ArgumentError('User profile nou found')
+      };
 }
 
 class UserModelADM extends UserModel {

@@ -31,7 +31,7 @@
     - [x] Modelo
     - [x] Auth Interceptor
       - [x] Add Token "onRequest" 
-    - [ ] Repository
+    - [x] Repository
     - [ ] Provider
   - [ ]Criar "my barbershop" provider
     - [ ] Modelo
