@@ -27,12 +27,12 @@
   - [x] Form e validações
   - [x] VM e State
   - [x] Integrar com Service
-  - [ ] Criar "me provider" provider
+  - [x] Criar "me provider" provider
     - [x] Modelo
     - [x] Auth Interceptor
       - [x] Add Token "onRequest" 
     - [x] Repository
-    - [ ] Provider
+    - [x] Provider
   - [ ]Criar "my barbershop" provider
     - [ ] Modelo
     - [ ] Barbershop Repository
