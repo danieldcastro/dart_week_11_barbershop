@@ -24,11 +24,11 @@
   - [x] Constants de imagens
   - [x] User login service provider
 - [ ] Implementar Login
-  - [ ] Form e validações
-  - [ ] VM e State
-  - [ ] Integrar com Service
+  - [x] Form e validações
+  - [x] VM e State
+  - [x] Integrar com Service
   - [ ] Criar "me provider" provider
-    - [ ] Modelo
+    - [x] Modelo
     - [ ] Repository
     - [ ] Provider
   - [ ]Criar "my barbershop" provider
