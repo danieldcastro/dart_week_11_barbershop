@@ -23,7 +23,7 @@
 - [x] Refactory
   - [x] Constants de imagens
   - [x] User login service provider
-- [ ] Implementar Login
+- [x] Implementar Login
   - [x] Form e validações
   - [x] VM e State
   - [x] Integrar com Service
@@ -37,7 +37,7 @@
     - [x] Modelo
     - [x] Barbershop Repository
     - [x] Provider
-  - [ ] Invalidar cache de me e barbershop
+  - [x] Invalidar cache de me e barbershop
 - [ ] Criar tela "Criar conta" usuário       
 - [ ] Implementar tela "criar conta" usuário
   - [ ] Auth Interceptor
