@@ -20,9 +20,9 @@
 ---
 ##dia 2
 
-- [ ] Refactory
-  - [ ] Constants de imagens
-  - [ ] User login service provider
+- [x] Refactory
+  - [x] Constants de imagens
+  - [x] User login service provider
 - [ ] Implementar Login
   - [ ] Form e validações
   - [ ] VM e State

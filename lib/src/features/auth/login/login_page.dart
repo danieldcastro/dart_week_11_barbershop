@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
           image: DecorationImage(
             opacity: .2,
             image: AssetImage(
-              'assets/images/background_image_chair.jpg',
+              ConstantImages.backgroundChair,
             ),
             fit: BoxFit.cover,
           ),
@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset('assets/images/imgLogo.png'),
+                        Image.asset(ConstantImages.imageLogo),
                         const SizedBox(
                           height: 24,
                         ),
