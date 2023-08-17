@@ -33,10 +33,10 @@
       - [x] Add Token "onRequest" 
     - [x] Repository
     - [x] Provider
-  - [ ]Criar "my barbershop" provider
-    - [ ] Modelo
-    - [ ] Barbershop Repository
-    - [ ] Provider
+  - [x]Criar "my barbershop" provider
+    - [x] Modelo
+    - [x] Barbershop Repository
+    - [x] Provider
   - [ ] Invalidar cache de me e barbershop
 - [ ] Criar tela "Criar conta" usuário       
 - [ ] Implementar tela "criar conta" usuário
