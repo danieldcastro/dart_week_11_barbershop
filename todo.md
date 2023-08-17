@@ -29,6 +29,8 @@
   - [x] Integrar com Service
   - [ ] Criar "me provider" provider
     - [x] Modelo
+    - [x] Auth Interceptor
+      - [x] Add Token "onRequest" 
     - [ ] Repository
     - [ ] Provider
   - [ ]Criar "my barbershop" provider
