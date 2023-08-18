@@ -1,4 +1,5 @@
 import 'package:asyncstate/widget/async_state_builder.dart';
+import 'package:dw_barbershop/src/core/ui/barbershop_nav_global_key.dart';
 import 'package:dw_barbershop/src/core/ui/barbershop_theme.dart';
 import 'package:dw_barbershop/src/core/ui/widgets/barbershop_loader.dart';
 import 'package:dw_barbershop/src/features/auth/login/login_page.dart';
@@ -22,6 +23,7 @@ class BarbershopApp extends StatelessWidget {
           '/home/adm': (_) => const Text('ADM'),
           '/home/employee': (_) => const Text('Employee'),
         },
+        navigatorKey: BarbershopNavGlobalKey.instance.navKey,
       ),
     );
   }

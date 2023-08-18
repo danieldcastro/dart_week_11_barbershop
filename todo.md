@@ -1,6 +1,6 @@
 ### Lista de Tarefas DW11
 ---
-##dia 1
+## dia 1
 
 - [x] Criar Backend e configurar 
 - [x] Criar projeto e adicionar dependências do Riverpod 
@@ -18,7 +18,7 @@
   - [x] SharedPreferences 
 
 ---
-##dia 2
+## dia 2
 
 - [x] Refactory
   - [x] Constants de imagens
@@ -33,17 +33,32 @@
       - [x] Add Token "onRequest" 
     - [x] Repository
     - [x] Provider
-  - [x]Criar "my barbershop" provider
+  - [x] Criar "my barbershop" provider
     - [x] Modelo
     - [x] Barbershop Repository
     - [x] Provider
   - [x] Invalidar cache de me e barbershop
+
+---
+## dia 3
+
+- [x] Auth Interceptor
+  - [x] Criar global nav key
+  - [x] Expire token "OnError" 
 - [ ] Criar tela "Criar conta" usuário       
 - [ ] Implementar tela "criar conta" usuário
-  - [ ] Auth Interceptor
-    - [ ] Add token "onRequest"
-    - [ ] Criar global nav key
-    - [ ] Expire token "OnError" 
   - [ ] UserRepository.registerAdm
   - [ ] UserRegisterService
-  - [ ] VM e State  
+  - [ ] VM e State 
+- [ ] Criar tela "criar conta" barbearia 
+  - [ ] Layout da tela
+  - [ ] WeekdaysPanel
+  - [ ] HoursPanel
+- [ ]Implementar tela "criar conta" barbearia    
+  - [ ] Repository
+  - [ ] VM e State
+- [ ] Refactory SplashPage
+  - [ ] Identificar usuário logado
+- [ ] Criar tela "Home ADM" 
+  - [ ] Header
+  - [ ] Employee Tile    
