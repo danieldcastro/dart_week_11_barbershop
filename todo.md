@@ -45,11 +45,11 @@
 - [x] Auth Interceptor
   - [x] Criar global nav key
   - [x] Expire token "OnError" 
-- [ ] Criar tela "Criar conta" usuário       
-- [ ] Implementar tela "criar conta" usuário
-  - [ ] UserRepository.registerAdm
-  - [ ] UserRegisterService
-  - [ ] VM e State 
+- [x] Criar tela "Criar conta" usuário       
+- [x] Implementar tela "criar conta" usuário
+  - [x] UserRepository.registerAdm
+  - [x] UserRegisterService
+  - [x] VM e State 
 - [ ] Criar tela "criar conta" barbearia 
   - [ ] Layout da tela
   - [ ] WeekdaysPanel
