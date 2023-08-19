@@ -20,7 +20,7 @@
 ---
 ## dia 2
 
-- [x] Refactory
+- [x] Refactoring
   - [x] Constants de imagens
   - [x] User login service provider
 - [x] Implementar Login
@@ -50,6 +50,8 @@
   - [x] UserRepository.registerAdm
   - [x] UserRegisterService
   - [x] VM e State 
+- [x] Refactoring 
+  - [x] Mover cadastro de usuário para a pasta Register/User    
 - [ ] Criar tela "criar conta" barbearia 
   - [ ] Layout da tela
   - [ ] WeekdaysPanel
@@ -57,7 +59,7 @@
 - [ ]Implementar tela "criar conta" barbearia    
   - [ ] Repository
   - [ ] VM e State
-- [ ] Refactory SplashPage
+- [ ] Refactoring SplashPage
   - [ ] Identificar usuário logado
 - [ ] Criar tela "Home ADM" 
   - [ ] Header
