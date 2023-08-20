@@ -60,7 +60,8 @@
   - [x] Repository
   - [x] VM e State
 - [ ] Refactoring SplashPage
-  - [ ] Identificar usuário logado
+  - [x] Identificar usuário logado
+  - [ ] Ajustar visualização da animação
 - [ ] Criar tela "Home ADM" 
   - [ ] Header
   - [ ] Employee Tile    
