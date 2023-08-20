@@ -52,10 +52,10 @@
   - [x] VM e State 
 - [x] Refactoring 
   - [x] Mover cadastro de usuário para a pasta Register/User    
-- [ ] Criar tela "criar conta" barbearia 
-  - [ ] Layout da tela
-  - [ ] WeekdaysPanel
-  - [ ] HoursPanel
+- [x] Criar tela "criar conta" barbearia 
+  - [x] Layout da tela
+  - [x] WeekdaysPanel
+  - [x] HoursPanel
 - [ ]Implementar tela "criar conta" barbearia    
   - [ ] Repository
   - [ ] VM e State
