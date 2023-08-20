@@ -56,11 +56,24 @@
   - [x] Layout da tela
   - [x] WeekdaysPanel
   - [x] HoursPanel
-- [ ]Implementar tela "criar conta" barbearia    
-  - [ ] Repository
-  - [ ] VM e State
+- [x]Implementar tela "criar conta" barbearia    
+  - [x] Repository
+  - [x] VM e State
 - [ ] Refactoring SplashPage
   - [ ] Identificar usuário logado
 - [ ] Criar tela "Home ADM" 
   - [ ] Header
   - [ ] Employee Tile    
+
+
+
+## Ideias para implementar:
+
+- [ ] Se o usuário criou conta, mas não finalizou o cadastro do estabelecimento, ao fazer login, mandar direto para "Cadastrar estabelecimento"
+- [ ] Incrementar formulários
+  - [ ] Submit button = next para todos os fields menos o último
+  - [ ] Submit button = save para o último field
+  - [ ] Botão para trocar o obscureText em fields de senha
+  - [ ] trocar o keyboard type para email e outros respectivos
+  - [ ] Não deixar colocar espaço em fields de email
+  - [ ] Retirar espaços em branco do começo e fim do campo de nome antes de enviar requisição (.trim())

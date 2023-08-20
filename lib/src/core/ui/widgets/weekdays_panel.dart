@@ -1,15 +1,18 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dw_barbershop/src/core/ui/constants.dart';
 import 'package:flutter/material.dart';
 
 class WeekdaysPanel extends StatelessWidget {
-  const WeekdaysPanel({super.key});
+  final ValueChanged<String> onDayPressed;
+  //ValueChanged é isso: ValueChanged<T> = void Function(T value);
+  const WeekdaysPanel({super.key, required this.onDayPressed});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        FittedBox(
+        const FittedBox(
           fit: BoxFit.scaleDown,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
@@ -19,7 +22,7 @@ class WeekdaysPanel extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         SizedBox(
           width: double.infinity,
           child: FittedBox(
@@ -27,13 +30,13 @@ class WeekdaysPanel extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                DayButton(label: 'Seg'),
-                DayButton(label: 'Ter'),
-                DayButton(label: 'Qua'),
-                DayButton(label: 'Qui'),
-                DayButton(label: 'Sex'),
-                DayButton(label: 'Sab'),
-                DayButton(label: 'Dom'),
+                DayButton(label: 'Seg', onDayPressed: onDayPressed),
+                DayButton(label: 'Ter', onDayPressed: onDayPressed),
+                DayButton(label: 'Qua', onDayPressed: onDayPressed),
+                DayButton(label: 'Qui', onDayPressed: onDayPressed),
+                DayButton(label: 'Sex', onDayPressed: onDayPressed),
+                DayButton(label: 'Sab', onDayPressed: onDayPressed),
+                DayButton(label: 'Dom', onDayPressed: onDayPressed),
               ],
             ),
           ),
@@ -43,38 +46,56 @@ class WeekdaysPanel extends StatelessWidget {
   }
 }
 
-class DayButton extends StatelessWidget {
+class DayButton extends StatefulWidget {
   final String label;
+  final ValueChanged<String> onDayPressed;
+  //ValueChanged é isso: ValueChanged<T> = void Function(T value);
 
   const DayButton({
     super.key,
     required this.label,
+    required this.onDayPressed,
   });
 
   @override
+  State<DayButton> createState() => _DayButtonState();
+}
+
+class _DayButtonState extends State<DayButton> {
+  bool selected = false;
+
+  @override
   Widget build(BuildContext context) {
+    final textColor = selected ? Colors.white : ConstantColors.grey;
+    final buttonColor = selected ? ConstantColors.brown : Colors.white;
+    final buttonBorderColor =
+        selected ? ConstantColors.brown : ConstantColors.grey;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: InkWell(
         borderRadius: BorderRadius.circular(8),
-        onTap: () {},
+        onTap: () {
+          widget.onDayPressed(widget.label);
+          setState(() {
+            selected = !selected;
+          });
+        },
         // Usar Ink ao invés de container para ter o splash
         child: Ink(
           width: 40,
           height: 56,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: Colors.white,
+              color: buttonColor,
               border: Border.all(
-                color: ConstantColors.grey,
+                color: buttonBorderColor,
               )),
           child: Center(
             child: Text(
-              label,
-              style: const TextStyle(
-                  fontSize: 12,
-                  color: ConstantColors.grey,
-                  fontWeight: FontWeight.w500),
+              widget.label,
+              style: TextStyle(
+                  fontSize: 12, color: textColor, fontWeight: FontWeight.w500),
             ),
           ),
         ),
