@@ -1,12 +1,13 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:dw_barbershop/src/core/ui/constants.dart';
-import 'package:dw_barbershop/src/features/auth/login/login_page.dart';
 import 'package:dw_barbershop/src/features/splash/splash_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/ui/helpers/messages.dart';
+import '../auth/login/login_page.dart';
 
 class SplashPage extends ConsumerStatefulWidget {
   const SplashPage({super.key});
@@ -21,6 +22,31 @@ class _SplashPageState extends ConsumerState<SplashPage> {
 
   double get _logoAnimationWidth => 100 * _scale;
   double get _logoAnimationHeight => 120 * _scale;
+
+  bool endAnimation = false;
+  Timer? redirectTimer;
+
+  _redirect(String routeName, Widget page) {
+    if (!endAnimation) {
+      redirectTimer?.cancel();
+      redirectTimer = Timer(const Duration(milliseconds: 300), () {
+        _redirect(routeName, page);
+      });
+      // Ele vai ficar chamando a função a cada 300 milissegundos para ter certeza que a animação acabou e assim poder fazer o redirecionamento.
+    } else {
+      redirectTimer?.cancel();
+      Navigator.pushAndRemoveUntil(
+          context,
+          PageRouteBuilder(
+              settings: RouteSettings(name: routeName),
+              transitionsBuilder: (_, animation, __, child) => FadeTransition(
+                    opacity: animation,
+                    child: child,
+                  ),
+              pageBuilder: (context, animation, secondaryAnimation) => page),
+          (route) => false);
+    }
+  }
 
   @override
   void initState() {
@@ -40,20 +66,17 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         error: (error, stackTrace) {
           log('Erro ao validar o login', error: error, stackTrace: stackTrace);
           Messages.showError('Erro ao validar o login', context);
-          Navigator.pushNamedAndRemoveUntil(
-              context, '/auth/login', (route) => false);
+          _redirect('/auth/login', const LoginPage());
         },
         data: (data) {
           switch (data) {
             case SplashState.loggedADM:
-              Navigator.pushNamedAndRemoveUntil(
-                  context, '/home/adm', (route) => false);
+              _redirect('/home/adm', const Text('ADM home'));
+
             case SplashState.loggedEmployee:
-              Navigator.pushNamedAndRemoveUntil(
-                  context, '/home/employee', (route) => false);
+              _redirect('/home/employee', const Text('Employee Home'));
             case _:
-              Navigator.pushNamedAndRemoveUntil(
-                  context, '/auth/login', (route) => false);
+              _redirect('/auth/login', const LoginPage());
           }
         },
       );
@@ -71,26 +94,16 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         ),
         child: AnimatedOpacity(
           onEnd: () {
-            Navigator.pushAndRemoveUntil(
-                context,
-                PageRouteBuilder(
-                  settings: const RouteSettings(name: '/auth/login'),
-                  transitionsBuilder: (_, animation, __, child) =>
-                      FadeTransition(
-                    opacity: animation,
-                    child: child,
-                  ),
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const LoginPage(),
-                ),
-                (route) => false);
+            setState(() {
+              endAnimation = true;
+            });
           },
           duration: const Duration(seconds: 3),
           curve: Curves.easeIn,
           opacity: _animationOpacityLogo,
           child: Center(
             child: AnimatedContainer(
-                duration: const Duration(seconds: 1),
+                duration: const Duration(seconds: 3),
                 curve: Curves.linearToEaseOut,
                 width: _logoAnimationWidth,
                 height: _logoAnimationHeight,

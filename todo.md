@@ -59,9 +59,9 @@
 - [x]Implementar tela "criar conta" barbearia    
   - [x] Repository
   - [x] VM e State
-- [ ] Refactoring SplashPage
+- [x] Refactoring SplashPage
   - [x] Identificar usuário logado
-  - [ ] Ajustar visualização da animação
+  - [x] Ajustar visualização da animação
 - [ ] Criar tela "Home ADM" 
   - [ ] Header
   - [ ] Employee Tile    
