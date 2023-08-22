@@ -2,6 +2,7 @@ import 'package:dw_barbershop/src/core/providers/application_providers.dart';
 import 'package:dw_barbershop/src/core/ui/barbershop_icons.dart';
 import 'package:dw_barbershop/src/core/ui/constants.dart';
 import 'package:dw_barbershop/src/core/ui/helpers/form_helper.dart';
+import 'package:dw_barbershop/src/core/ui/helpers/string_formatters_extension.dart';
 import 'package:dw_barbershop/src/core/ui/widgets/barbershop_loader.dart';
 import 'package:dw_barbershop/src/features/home/adm/home_adm_vm.dart';
 import 'package:flutter/material.dart';
@@ -37,9 +38,16 @@ class HomeHeader extends ConsumerWidget {
           data: (barbershopData) {
             return Row(
               children: [
-                const CircleAvatar(
-                  backgroundColor: Color(0xFFBDBDBD),
-                  child: SizedBox.shrink(),
+                CircleAvatar(
+                  backgroundColor: const Color(0xFFBDBDBD),
+                  child: Text(
+                    barbershopData.name.firstLetters,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 16),
                 Expanded(
