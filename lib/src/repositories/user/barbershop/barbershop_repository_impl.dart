@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
@@ -25,10 +24,8 @@ class BarbershopRepositoryImpl implements BarbershopRepository {
       case UserModelADM():
         final Response(data: List(first: data)) = await restClient.auth.get(
           '/barbershop',
-          queryParameters: {
-            'user_id':
-                '#userAuthRef' //O Json rest server vai substituir essa chave pelo id do usuário logado
-          },
+          queryParameters: {'user_id': '#userAuthRef'},
+          //O Json rest server vai substituir essa chave pelo id do usuário logado
         );
         return Success(BarbershopModel.fromMap(data));
       case UserModelEmployee():

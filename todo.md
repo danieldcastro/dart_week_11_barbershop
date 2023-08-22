@@ -70,9 +70,9 @@
   - [x] Header
   - [x] Employee Tile
 - [ ] Implementar tela "Home ADM"
-  - [ ] VM e State
+  - [x] VM e State
   - [ ] Implementar UserRepository.getEmployees
-  - [ ] Logout     
+  - [x] Logout     
 - [ ] Criar tela "Adicionar colaborador"
   - [ ] Criar componente AvatarWidget
   - [ ] Alterar componente de WeekdaysPanel, adicionando disabledDay

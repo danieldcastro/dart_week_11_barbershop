@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class BarbershopModel {
   final int id;
   final String name;
@@ -31,4 +30,9 @@ class BarbershopModel {
           ),
         _ => throw ArgumentError('Invalid Json'),
       };
+
+  @override
+  String toString() {
+    return 'BarbershopModel{id=$id, name=$name, email=$email, openingDays=$openingDays, openingHours=$openingHours}';
+  }
 }
