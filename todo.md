@@ -62,10 +62,32 @@
 - [x] Refactoring SplashPage
   - [x] Identificar usuário logado
   - [x] Ajustar visualização da animação
-- [ ] Criar tela "Home ADM" 
-  - [ ] Header
-  - [ ] Employee Tile    
 
+---
+## dia 4
+
+- [x] Criar tela "Home ADM" 
+  - [x] Header
+  - [x] Employee Tile
+- [ ] Implementar tela "Home ADM"
+  - [ ] VM e State
+  - [ ] Implementar UserRepository.getEmployees
+  - [ ] Logout     
+- [ ] Criar tela "Adicionar colaborador"
+  - [ ] Criar componente AvatarWidget
+  - [ ] Alterar componente de WeekdaysPanel, adicionando disabledDay
+  - [ ] Alterar componente de HoursPanel, adicionando disabledHour
+- [ ] Implementar tela "Adicionar colaborador"
+  - [ ] VM e State
+  - [ ] Implementar UserRepository.registerAdmAsEmployee
+  - [ ] Implementar UserRepository.registerEmployee
+  - [ ] VM.register
+- [ ] Criar tela "Agendar cliente"
+  - [ ]  Montar layout
+  - [ ]  Criar componente "ScheduleCalendar"
+    - [ ] Package table_calendar
+    - [ ] Customizar layout  
+  - [ ]  Customizar o HoursPanel permitindo única seleção
 
 
 ## Ideias para implementar:

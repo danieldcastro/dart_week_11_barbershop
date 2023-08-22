@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:dw_barbershop/src/core/ui/constants.dart';
+import 'package:dw_barbershop/src/features/home/adm/home_adm_page.dart';
 import 'package:dw_barbershop/src/features/splash/splash_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -71,7 +72,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
         data: (data) {
           switch (data) {
             case SplashState.loggedADM:
-              _redirect('/home/adm', const Text('ADM home'));
+              _redirect('/home/adm', const HomeAdmPage());
 
             case SplashState.loggedEmployee:
               _redirect('/home/employee', const Text('Employee Home'));

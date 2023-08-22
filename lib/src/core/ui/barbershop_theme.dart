@@ -19,6 +19,12 @@ sealed class BarbershopTheme {
               color: Colors.black,
               fontFamily: ConstantFonts.fontFamily)),
       inputDecorationTheme: InputDecorationTheme(
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        hintStyle: const TextStyle(
+            color: ConstantColors.grey,
+            fontSize: 14,
+            fontWeight: FontWeight.w500),
         filled: true,
         isDense: true,
         fillColor: Colors.white,
@@ -36,6 +42,18 @@ sealed class BarbershopTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: ConstantColors.brown,
           foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          side: const BorderSide(
+            color: ConstantColors.brown,
+            width: 1,
+          ),
+          foregroundColor: ConstantColors.brown,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
