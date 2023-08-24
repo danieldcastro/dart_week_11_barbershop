@@ -6,12 +6,14 @@ class HoursPanel extends StatelessWidget {
   final int startTime;
   final int endTime;
   final ValueChanged<int> onHourPressed;
+  final List<int>? enabledTimes;
 
   const HoursPanel({
     super.key,
     required this.startTime,
     required this.endTime,
     required this.onHourPressed,
+    this.enabledTimes,
   });
 
   @override
@@ -33,6 +35,7 @@ class HoursPanel extends StatelessWidget {
           children: [
             for (int i = startTime; i <= endTime; i++)
               TimeButton(
+                  enabledTimes: enabledTimes,
                   label: '${i.toString().padLeft(2, '0')}:00',
                   onHourPressed: onHourPressed,
                   value: i),
@@ -48,12 +51,14 @@ class TimeButton extends StatefulWidget {
   final String label;
   final int value;
   final ValueChanged<int> onHourPressed;
+  final List<int>? enabledTimes;
 
   const TimeButton({
     super.key,
     required this.label,
     required this.value,
     required this.onHourPressed,
+    required this.enabledTimes,
   });
 
   @override
@@ -65,19 +70,27 @@ class _TimeButtonState extends State<TimeButton> {
 
   @override
   Widget build(BuildContext context) {
+    final TimeButton(:value, :label, :enabledTimes, :onHourPressed) = widget;
+
     final textColor = selected ? Colors.white : ConstantColors.grey;
-    final buttonColor = selected ? ConstantColors.brown : Colors.white;
+    var buttonColor = selected ? ConstantColors.brown : Colors.white;
     final buttonBorderColor =
         selected ? ConstantColors.brown : ConstantColors.grey;
+    final disabledHour = enabledTimes != null && !enabledTimes.contains(value);
+    if (disabledHour) {
+      buttonColor = Colors.grey[400]!;
+    }
 
     return InkWell(
       borderRadius: BorderRadius.circular(8),
-      onTap: () {
-        setState(() {
-          selected = !selected;
-          widget.onHourPressed(widget.value);
-        });
-      },
+      onTap: disabledHour
+          ? null
+          : () {
+              setState(() {
+                selected = !selected;
+                onHourPressed(value);
+              });
+            },
       child: Ink(
         width: 64,
         height: 36,
@@ -89,7 +102,7 @@ class _TimeButtonState extends State<TimeButton> {
             )),
         child: Center(
           child: Text(
-            widget.label,
+            label,
             style: TextStyle(
                 fontSize: 12, color: textColor, fontWeight: FontWeight.w500),
           ),

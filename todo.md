@@ -73,10 +73,10 @@
   - [x] VM e State
   - [x] Implementar UserRepository.getEmployees
   - [x] Logout     
-- [ ] Criar tela "Adicionar colaborador"
-  - [ ] Criar componente AvatarWidget
-  - [ ] Alterar componente de WeekdaysPanel, adicionando disabledDay
-  - [ ] Alterar componente de HoursPanel, adicionando disabledHour
+- [x] Criar tela "Adicionar colaborador"
+  - [x] Criar componente AvatarWidget
+  - [x] Alterar componente de WeekdaysPanel, adicionando disabledDay
+  - [x] Alterar componente de HoursPanel, adicionando disabledHour
 - [ ] Implementar tela "Adicionar colaborador"
   - [ ] VM e State
   - [ ] Implementar UserRepository.registerAdmAsEmployee
