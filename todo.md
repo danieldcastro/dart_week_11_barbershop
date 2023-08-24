@@ -69,9 +69,9 @@
 - [x] Criar tela "Home ADM" 
   - [x] Header
   - [x] Employee Tile
-- [ ] Implementar tela "Home ADM"
+- [x] Implementar tela "Home ADM"
   - [x] VM e State
-  - [ ] Implementar UserRepository.getEmployees
+  - [x] Implementar UserRepository.getEmployees
   - [x] Logout     
 - [ ] Criar tela "Adicionar colaborador"
   - [ ] Criar componente AvatarWidget
