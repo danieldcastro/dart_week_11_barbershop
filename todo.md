@@ -77,11 +77,11 @@
   - [x] Criar componente AvatarWidget
   - [x] Alterar componente de WeekdaysPanel, adicionando disabledDay
   - [x] Alterar componente de HoursPanel, adicionando disabledHour
-- [ ] Implementar tela "Adicionar colaborador"
-  - [ ] VM e State
-  - [ ] Implementar UserRepository.registerAdmAsEmployee
-  - [ ] Implementar UserRepository.registerEmployee
-  - [ ] VM.register
+- [x] Implementar tela "Adicionar colaborador"
+  - [x] VM e State
+  - [x] Implementar UserRepository.registerAdmAsEmployee
+  - [x] Implementar UserRepository.registerEmployee
+  - [x] VM.register
 - [ ] Criar tela "Agendar cliente"
   - [ ]  Montar layout
   - [ ]  Criar componente "ScheduleCalendar"
@@ -100,3 +100,5 @@
   - [ ] trocar o keyboard type para email e outros respectivos
   - [ ] Não deixar colocar espaço em fields de email
   - [ ] Retirar espaços em branco do começo e fim do campo de nome antes de enviar requisição (.trim())
+- [ ] Colocar padding no final da HomeAdmPage
+- [ ] Mudar a string de "Cadastrar como colaborador" para "Atualizar cadastro como colaborador" quando já houver workDays e workHours cadastrados e exibir esses itens na tela já selecionados
