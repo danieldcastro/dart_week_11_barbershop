@@ -82,13 +82,36 @@
   - [x] Implementar UserRepository.registerAdmAsEmployee
   - [x] Implementar UserRepository.registerEmployee
   - [x] VM.register
-- [ ] Criar tela "Agendar cliente"
-  - [ ]  Montar layout
-  - [ ]  Criar componente "ScheduleCalendar"
-    - [ ] Package table_calendar
-    - [ ] Customizar layout  
-  - [ ]  Customizar o HoursPanel permitindo única seleção
 
+---
+## dia 4
+
+- [X] Criar tela "Agendar cliente"
+  - [x]  Montar layout
+  - [x]  Criar componente "ScheduleCalendar"
+    - [x] Package table_calendar
+    - [x] Customizar layout  
+  - [X]  Customizar o HoursPanel permitindo única seleção
+- [ ] Implementar tela "Agendar Cliente"
+  - [ ] VM e State
+  - [ ] VM.hourSelect e VM.DateSelect
+  - [ ] Implementar ScheduleRepository.scheduleClient
+  - [ ] Implementar VM.register
+- [ ] Criar tela "Agenda Colaborador"
+  - [ ] Montar layout
+    - [ ] Adicionar package syncfusion_flutter_calendar
+- [ ] Implementar tela "Agenda Colaborador"
+  - [ ] VM e State
+  - [ ] Implementar ScheduleRepository.findScheduleByDate
+  - [ ] Implementar Calendar Datasource
+  - [ ] Implementar alteração de data 
+- [ ] Criar tela "Home Colaborador" 
+  - [ ] Montar layout
+- [ ] Implementar tela "Home Colaborador"
+  - [ ] VM e State
+  - [ ] Busca de agendamentos
+  - [ ] Botões Agendar Cliente e Agenda
+- [ ] Update Home quando voltar para a tela     
 
 ## Ideias para implementar:
 

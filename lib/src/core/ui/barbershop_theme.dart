@@ -21,14 +21,11 @@ sealed class BarbershopTheme {
       inputDecorationTheme: InputDecorationTheme(
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-        hintStyle: const TextStyle(
-            color: ConstantColors.grey,
-            fontSize: 14,
-            fontWeight: FontWeight.w500),
+        hintStyle: const TextStyle(color: ConstantColors.grey),
+        labelStyle: const TextStyle(color: ConstantColors.grey),
         filled: true,
         isDense: true,
         fillColor: Colors.white,
-        labelStyle: const TextStyle(color: ConstantColors.grey),
         border: _defaultInputBorder,
         enabledBorder: _defaultInputBorder,
         focusedBorder: _defaultInputBorder,

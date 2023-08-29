@@ -51,7 +51,8 @@ class HomeEmployeeTile extends StatelessWidget {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(horizontal: 12)),
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.pushNamed(context, '/schedule'),
                       child: const Text(
                         'AGENDAR',
                         style: TextStyle(),
