@@ -86,15 +86,15 @@
 ---
 ## dia 4
 
-- [X] Criar tela "Agendar cliente"
+- [x] Criar tela "Agendar cliente"
   - [x]  Montar layout
   - [x]  Criar componente "ScheduleCalendar"
     - [x] Package table_calendar
     - [x] Customizar layout  
-  - [X]  Customizar o HoursPanel permitindo única seleção
+  - [x]  Customizar o HoursPanel permitindo única seleção
 - [ ] Implementar tela "Agendar Cliente"
-  - [ ] VM e State
-  - [ ] VM.hourSelect e VM.DateSelect
+  - [x] VM e State
+  - [x] VM.hourSelect e VM.DateSelect
   - [ ] Implementar ScheduleRepository.scheduleClient
   - [ ] Implementar VM.register
 - [ ] Criar tela "Agenda Colaborador"
