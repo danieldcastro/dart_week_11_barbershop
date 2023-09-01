@@ -92,11 +92,11 @@
     - [x] Package table_calendar
     - [x] Customizar layout  
   - [x]  Customizar o HoursPanel permitindo única seleção
-- [ ] Implementar tela "Agendar Cliente"
+- [x] Implementar tela "Agendar Cliente"
   - [x] VM e State
   - [x] VM.hourSelect e VM.DateSelect
-  - [ ] Implementar ScheduleRepository.scheduleClient
-  - [ ] Implementar VM.register
+  - [x] Implementar ScheduleRepository.scheduleClient
+  - [x] Implementar VM.register
 - [ ] Criar tela "Agenda Colaborador"
   - [ ] Montar layout
     - [ ] Adicionar package syncfusion_flutter_calendar
